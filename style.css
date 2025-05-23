@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 1000;
+}
+
+.profile-container {
+    margin-top: 60px;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #00f;
+    object-fit: cover;
+}
+
+.reseaux {
+    margin: 20px 0;
+}
+
+.reseau-icon {
+    font-size: 30px;
+    margin: 10px;
+    color: inherit;
+    transition: transform 0.3s;
+}
+
+.reseau-icon:hover {
+    transform: scale(1.2);
+}
+
+.signup-form, .chat-section {
+    margin: 20px auto;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.signup-form input, .chat-section input {
+    width: 90%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: none;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #00aaff;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0077cc;
+}
+
+/* Thème sombre */
+body.dark {
+    background-color: #000;
+    color: #fff;
+}
+
+body.dark .signup-form, body.dark .chat-section {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+/* Bulles */
+.bubbles {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+
+.bubbles::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, #00f 2px, transparent 2px);
+    background-size: 50px 50px;
+    animation: bubblemove 20s linear infinite;
+}
+
+@keyframes bubblemove {
+    0% { background-position: 0 0; }
+    100% { background-position: 1000px 1000px; }
+}

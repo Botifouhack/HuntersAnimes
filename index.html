@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>HUNTERS ANIMES</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="theme-toggle" onclick="toggleTheme()">
+        <i id="theme-icon" class="fas fa-moon"></i>
+    </div>
+
+    <div class="bubbles" id="bubbles"></div>
+
+    <div class="profile-container">
+        <img src="photo.jpg" alt="Photo de profil" class="profile-photo">
+    </div>
+
+    <h1>BIENVENUE SUR LA PAGE DE HUNTERS ANIMES</h1>
+    <h2><b>Ceci est une page dédiée à la communauté Hunters Animes</b></h2>
+    <h2>Nous sommes une organisation dédiée aux animes en Afrique</h2>
+
+    <h4>Nous sommes présents sur :</h4>
+    <div class="reseaux">
+        <a href="https://whatsapp.com/channel/0029VayJU9f1t90TWGDON03K" target="_blank" class="reseau-icon"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61572761410141" target="_blank" class="reseau-icon"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/ryah.0?igsh=YzljYTk1ODg3Zg==" target="_blank" class="reseau-icon"><i class="fab fa-instagram"></i></a>
+        <a href="https://t.me/HUNTERS_ANIMES" target="_blank" class="reseau-icon"><i class="fab fa-telegram"></i></a>
+    </div>
+
+    <button onclick="afficherMessage()">Clique ici pour une surprise</button>
+    <p id="message"></p>
+
+    <div class="signup-form">
+        <h3>Créer un compte</h3>
+        <form onsubmit="creerCompte(event)">
+            <input type="text" id="nom" placeholder="Nom d'utilisateur" required>
+            <input type="email" id="email" placeholder="Adresse e-mail" required>
+            <input type="password" id="motdepasse" placeholder="Mot de passe" required>
+            <input type="password" id="confirm" placeholder="Confirmer le mot de passe" required>
+            <button type="submit">S'inscrire</button>
+        </form>
+        <p id="resultat"></p>
+    </div>
+
+    <div class="chat-section" id="chat">
+        <h3>Chat Communautaire</h3>
+        <div id="chat-box"></div>
+        <input type="text" id="chat-input" placeholder="Écris ton message ici">
+        <button id="envoyer" onclick="envoyerMessage()">Envoyer</button>
+    </div>
+
+    <footer>MAGNIFICAT NOUR 2025©</footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
